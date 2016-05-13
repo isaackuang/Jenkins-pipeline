@@ -12,7 +12,7 @@ node('node') {
 
 
         sh 'echo "test environment."'
-        sh 'echo $(date)'
+        sh 'echo "hello world."'
 
       stage 'approve'
 
