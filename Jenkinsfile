@@ -15,8 +15,8 @@ node('node') {
         sh 'date'
 
       stage 'approve'
-      
-          input message: 'Do you want to deploy?', ok:'Deploy', submitter: 'ops'
+
+          input message: "Is OK ?"
 
       stage 'Deploy'
 
