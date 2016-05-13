@@ -9,7 +9,7 @@ node('node') {
 
       stage 'Test'
         env.NODE_ENV = "test"
-        print "Environment is : $(env.NODE_ENV)"
+        
 
         sh 'echo "test environment."'
         sh 'date'
@@ -32,7 +32,7 @@ node('node') {
         if (err) {
 
         throw err
-        
+
         }
     }
 
