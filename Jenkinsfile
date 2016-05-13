@@ -9,10 +9,15 @@ node('node') {
 
       stage 'Test'
         env.NODE_ENV = "test"
-        
+
 
         sh 'echo "test environment."'
         sh 'date'
+
+      stage 'approve'
+        timeout(time: 7, unit: 'DAYS') {
+          input message: 'Do you want to deploy?', submitter: 'ops'
+        }
 
       stage 'Deploy'
 
