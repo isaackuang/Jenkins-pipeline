@@ -15,9 +15,8 @@ node('node') {
         sh 'date'
 
       stage 'approve'
-        timeout(time: 7, unit: 'DAYS') {
+      
           input message: 'Do you want to deploy?', ok:'Deploy', submitter: 'ops'
-        }
 
       stage 'Deploy'
 
